@@ -6,7 +6,8 @@ function App() {
   const [name, setName] = useState("");
   const [course, setCourse] = useState("");
 
-  const API_URL = "http://localhost:8080/api/students";
+  const API_URL =
+    import.meta.env.VITE_API_URL || "http://localhost:8080/api/students";
 
   // Get students from Spring Boot
   const loadStudents = async () => {
